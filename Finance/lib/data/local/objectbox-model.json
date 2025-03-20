@@ -1,0 +1,488 @@
+{
+  "_note1": "KEEP THIS FILE! Check it into a version control system (VCS) like git.",
+  "_note2": "ObjectBox manages crucial IDs for your object model. See docs for details.",
+  "_note3": "If you have VCS merge conflicts, you must resolve them according to ObjectBox docs.",
+  "entities": [
+    {
+      "id": "1:4592610630340206408",
+      "lastPropertyId": "3:1162542413672179316",
+      "name": "ActiveUser",
+      "properties": [
+        {
+          "id": "1:2985366399970573488",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:3130950302305962207",
+          "name": "lastActivityTime",
+          "type": 10
+        },
+        {
+          "id": "3:1162542413672179316",
+          "name": "userId",
+          "type": 11,
+          "flags": 520,
+          "indexId": "1:6927739546908584081",
+          "relationTarget": "Users"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "2:1907906658165811967",
+      "lastPropertyId": "4:8069883561412357779",
+      "name": "CategoriesModel",
+      "properties": [
+        {
+          "id": "1:2362562661721401825",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:8998437982253619357",
+          "name": "message",
+          "type": 9
+        },
+        {
+          "id": "3:6077040380040914783",
+          "name": "lastAccessed",
+          "type": 10
+        },
+        {
+          "id": "4:8069883561412357779",
+          "name": "serverId",
+          "type": 6
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "3:3523655912915669180",
+      "lastPropertyId": "8:4456986581451545328",
+      "name": "GroupTransactionModel",
+      "properties": [
+        {
+          "id": "1:134479426838856467",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:5832138770428960215",
+          "name": "creatorId",
+          "type": 6
+        },
+        {
+          "id": "3:586657737734109026",
+          "name": "serverId",
+          "type": 6
+        },
+        {
+          "id": "4:127974317587321962",
+          "name": "amount",
+          "type": 6
+        },
+        {
+          "id": "5:538839864693460078",
+          "name": "createdAt",
+          "type": 10
+        },
+        {
+          "id": "6:1080059024522930949",
+          "name": "updatedAt",
+          "type": 10
+        },
+        {
+          "id": "7:8866074925907869392",
+          "name": "groupId",
+          "type": 11,
+          "flags": 520,
+          "indexId": "2:3610860422873397201",
+          "relationTarget": "Groups"
+        },
+        {
+          "id": "8:4456986581451545328",
+          "name": "categoryId",
+          "type": 11,
+          "flags": 520,
+          "indexId": "3:2674786095933439799",
+          "relationTarget": "CategoriesModel"
+        }
+      ],
+      "relations": [
+        {
+          "id": "1:5384355861399032122",
+          "name": "transactionParticipants",
+          "targetId": "9:6838203135665877011"
+        }
+      ]
+    },
+    {
+      "id": "4:2903044715664348888",
+      "lastPropertyId": "6:344129778156617439",
+      "name": "Groups",
+      "properties": [
+        {
+          "id": "1:1966877858275218422",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:8031532337111343250",
+          "name": "serverId",
+          "type": 6
+        },
+        {
+          "id": "3:2982006841536573658",
+          "name": "groupName",
+          "type": 9
+        },
+        {
+          "id": "4:5047648051954172509",
+          "name": "groupProfilePic",
+          "type": 9
+        },
+        {
+          "id": "5:3380351540226227894",
+          "name": "createdAt",
+          "type": 10
+        },
+        {
+          "id": "6:344129778156617439",
+          "name": "updatedAt",
+          "type": 10
+        }
+      ],
+      "relations": [
+        {
+          "id": "2:3366968401068556798",
+          "name": "participants",
+          "targetId": "9:6838203135665877011"
+        }
+      ]
+    },
+    {
+      "id": "5:8642409169971033274",
+      "lastPropertyId": "11:604760653372862066",
+      "name": "PersonalTransaction",
+      "properties": [
+        {
+          "id": "1:5360498146069746486",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:4654870436005155062",
+          "name": "serverId",
+          "type": 6
+        },
+        {
+          "id": "3:5891552488860789365",
+          "name": "transactionType",
+          "type": 9
+        },
+        {
+          "id": "4:975800457814538780",
+          "name": "accNumber",
+          "type": 9
+        },
+        {
+          "id": "5:99187794971593792",
+          "name": "smsBody",
+          "type": 9
+        },
+        {
+          "id": "6:5468746982989739339",
+          "name": "amount",
+          "type": 9
+        },
+        {
+          "id": "7:898535128547292957",
+          "name": "description",
+          "type": 9
+        },
+        {
+          "id": "8:2404391678589564999",
+          "name": "createdAt",
+          "type": 10
+        },
+        {
+          "id": "9:4151197304642664265",
+          "name": "updatedAt",
+          "type": 10
+        },
+        {
+          "id": "10:9149079890277447566",
+          "name": "transactionIdId",
+          "type": 11,
+          "flags": 520,
+          "indexId": "4:4219849436321009096",
+          "relationTarget": "UserTransaction"
+        },
+        {
+          "id": "11:604760653372862066",
+          "name": "groupTransactionId",
+          "type": 11,
+          "flags": 520,
+          "indexId": "5:731610041434081532",
+          "relationTarget": "GroupTransactionModel"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "6:5172115406556042158",
+      "lastPropertyId": "4:2662351892296052798",
+      "name": "UserContactsObjectBoxModel",
+      "properties": [
+        {
+          "id": "1:4746395829122692247",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:1268141023205588166",
+          "name": "contact_user_id",
+          "type": 6
+        },
+        {
+          "id": "3:8124348978296003775",
+          "name": "user_id",
+          "type": 6
+        },
+        {
+          "id": "4:2662351892296052798",
+          "name": "contact_name",
+          "type": 9
+        }
+      ],
+      "relations": [
+        {
+          "id": "3:6119506772473639810",
+          "name": "users",
+          "targetId": "9:6838203135665877011"
+        }
+      ]
+    },
+    {
+      "id": "7:7845594981231642002",
+      "lastPropertyId": "9:4270524095038577464",
+      "name": "UserGroupEntityModel",
+      "properties": [
+        {
+          "id": "1:7772575883190505216",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:8669582731349118813",
+          "name": "entityId",
+          "type": 6
+        },
+        {
+          "id": "3:5670355978118172546",
+          "name": "lastActivityTime",
+          "type": 10
+        },
+        {
+          "id": "4:2111778956392474925",
+          "name": "name",
+          "type": 9
+        },
+        {
+          "id": "5:947421033859741866",
+          "name": "profilePicture",
+          "type": 9
+        },
+        {
+          "id": "6:5770510604320702762",
+          "name": "amount",
+          "type": 6
+        },
+        {
+          "id": "7:4488686182766578315",
+          "name": "createdAt",
+          "type": 10
+        },
+        {
+          "id": "8:6618090533707112070",
+          "name": "updatedAt",
+          "type": 10
+        },
+        {
+          "id": "9:4270524095038577464",
+          "name": "dbType",
+          "type": 6
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "8:492394358669671165",
+      "lastPropertyId": "15:3845314861717826952",
+      "name": "UserTransaction",
+      "properties": [
+        {
+          "id": "1:5908734136588606102",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:2474625298475804333",
+          "name": "trUserId",
+          "type": 6
+        },
+        {
+          "id": "3:7462654606662929985",
+          "name": "laneUserId",
+          "type": 6
+        },
+        {
+          "id": "4:2286974248564693529",
+          "name": "daneUserId",
+          "type": 6
+        },
+        {
+          "id": "5:2423308745719452968",
+          "name": "amount",
+          "type": 9
+        },
+        {
+          "id": "6:4559425372969184757",
+          "name": "paymentStatus",
+          "type": 9
+        },
+        {
+          "id": "7:8065993934352459958",
+          "name": "confirmation",
+          "type": 9
+        },
+        {
+          "id": "8:6308603933126744519",
+          "name": "createdAt",
+          "type": 10
+        },
+        {
+          "id": "9:9165912181611436909",
+          "name": "updatedAt",
+          "type": 10
+        },
+        {
+          "id": "10:4753223621575794779",
+          "name": "dueDate",
+          "type": 10
+        },
+        {
+          "id": "11:2691063986725760954",
+          "name": "serverId",
+          "type": 6,
+          "flags": 40,
+          "indexId": "6:6302830928546031572"
+        },
+        {
+          "id": "12:4124711685713882299",
+          "name": "settleTransactionId",
+          "type": 6
+        },
+        {
+          "id": "13:1046082445702707064",
+          "name": "userId",
+          "type": 11,
+          "flags": 520,
+          "indexId": "7:5633232348944667609",
+          "relationTarget": "Users"
+        },
+        {
+          "id": "14:4339383970860595172",
+          "name": "groupTransactionId",
+          "type": 11,
+          "flags": 520,
+          "indexId": "8:1905050922887042916",
+          "relationTarget": "GroupTransactionModel"
+        },
+        {
+          "id": "15:3845314861717826952",
+          "name": "categoryId",
+          "type": 11,
+          "flags": 520,
+          "indexId": "9:8895177240547315014",
+          "relationTarget": "CategoriesModel"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "9:6838203135665877011",
+      "lastPropertyId": "9:1773932116342480",
+      "name": "Users",
+      "properties": [
+        {
+          "id": "1:2548020432127978578",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:3819986985920465742",
+          "name": "onboarded_at",
+          "type": 6
+        },
+        {
+          "id": "3:2752489486189166226",
+          "name": "full_name",
+          "type": 9
+        },
+        {
+          "id": "4:3721921652634198315",
+          "name": "email",
+          "type": 9
+        },
+        {
+          "id": "5:8265823719976723641",
+          "name": "pincode",
+          "type": 6
+        },
+        {
+          "id": "6:7345464583468560638",
+          "name": "tapCount",
+          "type": 6
+        },
+        {
+          "id": "7:6004776519775985514",
+          "name": "onBoardedAt",
+          "type": 10
+        },
+        {
+          "id": "8:2697672510074469769",
+          "name": "phone_no",
+          "type": 9
+        },
+        {
+          "id": "9:1773932116342480",
+          "name": "serverId",
+          "type": 6
+        }
+      ],
+      "relations": []
+    }
+  ],
+  "lastEntityId": "9:6838203135665877011",
+  "lastIndexId": "9:8895177240547315014",
+  "lastRelationId": "3:6119506772473639810",
+  "lastSequenceId": "0:0",
+  "modelVersion": 5,
+  "modelVersionParserMinimum": 5,
+  "retiredEntityUids": [],
+  "retiredIndexUids": [],
+  "retiredPropertyUids": [],
+  "retiredRelationUids": [],
+  "version": 1
+}

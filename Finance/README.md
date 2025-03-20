@@ -37,6 +37,5 @@ MyFinance1 is a **Flutter-based finance management app** that helps users track 
 ## 🤝 Contributing
 Feel free to fork the repo, create a new branch, and submit a pull request!
 
-## 📜 License
-This project is licensed under the MIT License.
+
 
